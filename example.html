@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta name=author content="Dana Janoskova">
+  <meta name=description
+    content="A full-functioning Vue.js (routes, actions, state management..) embeddable widget in HTML">
+  <meta name=robots content="index, follow">
+
+  <meta property=og:image:width content=1200>
+  <meta property=og:image:height content=630>
+  <meta property="og:image" content="http://vuidget-source.danajanoskova.sk/img/vuidget-logo.jpg" />
+  <link rel=icon type=image/png href="http://vuidget-source.danajanoskova.sk/img/favicon.png">
+
+  <!-- basic bootstrap styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
+  <!-- widget source css -->
+  <link href="http://vuidget-source.danajanoskova.sk/css/app.css" rel=stylesheet>
+
+  <style>
+  h2, h3, h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  body {
+    padding: 30px;
+  }
+
+
+  .logo-main {
+    width: 70%;
+    max-width: 500px;
+    max-height: 170px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  vue-widget #app {
+    border: 1px #eaeaea solid;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  </style>
+</head>
+
+<body>
+<div class="container-fluid">
+  <img src="https://github.com/DJanoskova/Vuidget/blob/master/src/assets/img/logo.png?raw=true" alt="Vuidget"
+    class="logo-main">
+  <h1 class="d-none">
+    Vuidget
+  </h1>
+  <div class="row">
+    <div class="col-md-12">
+      <p>
+        This project is dedicated to all Vue.js developers who tried to embed their application as an external widget
+        and failed, or to those who wish to do so but lack the resources.
+      </p>
+      <br>
+      <p>
+        It shows how to use <strong>advanced</strong> Vue.js application as an embeddable HTML widget - meaning an app
+        that contains <em>store, routes, actions, mutations, socket, i18n</em> - simply whatever you choose. Anything
+        used in a traditional
+        single-page application can be used the same way here.
+      </p>
+      <br>
+      <h2>Example of a code in main.js</h2>
+      <h4 class="text-info">Before widget setup</h4>
+      <pre>new Vue({
+  sockets: sockets,
+  i18n: i18n.init(lang, translations, CONST.FALLBACK_LOCALE),
+  el: '#app',
+  render: h => h(App),
+  store,
+  router
+})
+      </pre>
+      <h4 class="text-info">After widget setup</h4>
+      <pre>App.sockets = sockets
+App.i18n = i18n.init(lang, translations, CONST.FALLBACK_LOCALE)
+App.router = router
+App.store = store
+Vue.customElement('my-widget', App)
+      </pre>
+      <div class="alert alert-primary">
+        Notice that we are not using new Vue() anymore.
+      </div>
+    </div>
+    <div class="col-md-12">
+      <vue-widget title="Vuidget live example"></vue-widget>
+      <br>
+      <h2 class="text-center">
+        <code>
+          &lt;vue-widget title="Vuidget live example" /&gt;
+        </code>
+      </h2>
+    </div>
+  </div>
+  <hr>
+  <h2>The source code is available at GitHub -
+    <a href="https://github.com/DJanoskova/Vuidget" target="_blank">
+      https://github.com/DJanoskova/Vuidget</a>
+  </h2>
+  <hr>
+  <h3>
+    None of this would be possible without <a href="https://github.com/karol-f/vue-custom-element" target="_blank">
+    https://github.com/karol-f/vue-custom-element
+  </a> created by karol-f
+  </h3>
+  Vue-custom-element is a tiny wrapper around Vue components. It provide seamless way to use it in HTML, plain
+  JavaScript, Vue, React, Angular etc., without manually initialising Vue. It's using power of Web Components' Custom
+  Elements.
+  <br>
+</div>
+
+<!-- widget source js -->
+<script src="http://vuidget-source.danajanoskova.sk/js/app.js"></script>
+</body>
+
+</html>
