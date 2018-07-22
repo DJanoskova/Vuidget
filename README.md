@@ -1,6 +1,8 @@
 # Vuidget -  Vue.js embaddable widget
 ### Supporting Vue-Router and Vuex!
 
+![alt text](https://github.com/DJanoskova/Vuidget/blob/master/src/assets/img/logo.png)
+
 In case you're wondering how to create a full-functioning Vue.js *(routes, actions, state management..)* embeddable widget in HTML, check this repository - the source and the commits.
 
 The result are going to be bundled .js and .css files, that allow you to embed your widget as an HTML component -
