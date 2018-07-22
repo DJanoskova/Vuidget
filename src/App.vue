@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/img/logo.png" class="logo-main" alt="Vuidget">
+    <!-- access root props via $root -->
+    <h1 style="text-align: center" v-if="$root.title">{{ $root.title }}</h1>
+
     <at-menu mode="horizontal" :active-name="activeTab" @on-select="switchTab">
       <at-menu-item name="list">
         <i class="icon icon-list"></i>
