@@ -30,6 +30,10 @@
     margin-bottom: 0.5rem;
   }
 
+  body, html {
+    height: auto;
+  }
+
   body {
     padding: 30px;
   }
@@ -96,9 +100,19 @@ Vue.customElement('my-widget', App)
     <div class="col-md-12">
       <vue-widget title="Vuidget live example"></vue-widget>
       <br>
-      <h2 class="text-center">
+      <h2>
+        <code>
+          &lt;link href="http://vuidget-source.danajanoskova.sk/css/app.css" rel=stylesheet/&gt;
+        </code>
+        <br>
+        <br>
         <code>
           &lt;vue-widget title="Vuidget live example" /&gt;
+        </code>
+        <br>
+        <br>
+        <code>
+          &lt;script src="http://vuidget-source.danajanoskova.sk/js/app.js"/&gt;&lt;/script/&gt;
         </code>
       </h2>
     </div>
