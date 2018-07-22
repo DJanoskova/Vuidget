@@ -21,5 +21,7 @@ export default new Router({
       path: '/*',
       redirect: { name: 'list' }
     }
-  ]
+  ],
+  mode: 'abstract',
+  linkActiveClass: 'active'
 })
