@@ -16,6 +16,8 @@ http://vuidget.danajanoskova.sk/
 
 > Contents of the `dist` build folder were uploaded to http://vuidget-source.danajanoskova.sk/ and embedded in the demo application. It's necessary to upload your generated files somewhere accessible in order to include them as a widget. Don't forget the .htaccess file to allow various origins to access your widget files, like fonts or images.
 
+> `Header add Access-Control-Allow-Origin "*" `
+
 ...
 
 **This Vue.js application was created on 22.07.2018 with Vue CLI 3. That means any config I might have is inherited from @vue/cli. Any required dependencies to allow this app to function as an embeddable widget will be listed below.**
