@@ -10,6 +10,9 @@ import 'at-ui-style/css/at.css'
 import './assets/css/main.scss'
 
 // widget setup
+// (optional) 'Custom elements polyfill'
+import 'document-register-element/build/document-register-element'
+// vue-custom-element by karol-f
 import vueCustomElement from 'vue-custom-element'
 Vue.use(vueCustomElement)
 
@@ -23,9 +26,8 @@ Vue.config.productionTip = false
 //   render: h => h(App)
 // }).$mount('#app')
 
+// use vue-custom-element
 App.store = store
 App.router = router
 App.props = ['title']
 Vue.customElement('vue-widget', App)
-
-router.replace('/')

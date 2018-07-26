@@ -20,7 +20,7 @@ http://vuidget.danajanoskova.sk/
 
 **This Vue.js application was created on 22.07.2018 with Vue CLI 3. That means any config I might have is inherited from @vue/cli. Any required dependencies to allow this app to function as an embeddable widget will be listed below.**
 
-* [vue-custom-element](https://github.com/karol-f/vue-custom-element) by karol-f
+* **[vue-custom-element](https://github.com/karol-f/vue-custom-element)** by karol-f
 
 ```
 npm install vue-custom-element --save
@@ -28,6 +28,11 @@ npm install vue-custom-element --save
 * **Webpack** - we will be using webpack's "LimitChunkCountPlugin" function to prevent app from creating .js chunks for hidden views
 ```
 npm install webpack --save
+```
+
+* *(Optional)* **Custom elements polyfill** for cross-browser compatibility, also mentioned in [vue-custom-element](https://github.com/karol-f/vue-custom-element)
+```
+npm install document-register-element --save
 ```
 
 ### The command `npm run build` will build your source files for the widget.
