@@ -1,4 +1,4 @@
-# Vuidget -  Vue.js embaddable widget
+# Vuidget -  Vue.js embeddable widget
 ### Supporting Vue-Router and Vuex!
 
 ![alt text](https://github.com/DJanoskova/Vuidget/blob/master/src/assets/img/logo.png)
