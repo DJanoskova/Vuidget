@@ -29,5 +29,4 @@ Vue.config.productionTip = false
 // use vue-custom-element
 App.store = store
 App.router = router
-App.props = ['title']
 Vue.customElement('vue-widget', App)
